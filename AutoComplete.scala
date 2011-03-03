@@ -198,11 +198,19 @@ class AutoComplete {
         });
       });""")
 
+      val onLoad2 = JsRaw("""
+      jQuery(document).ready(function(){
+        jQuery("#"""+id+"""").bind("blur", function() {
+          jQuery("#"""+hidden+"""").val(jQuery("#"""+id+"""").val());
+        });
+      });""")
+
       <span>
         <head>
           <link rel="stylesheet" href={"/" + LiftRules.resourceServerPath +"/autocomplete/jquery.autocomplete.css"} type="text/css" />
           <script type="text/javascript" src={"/" + LiftRules.resourceServerPath +"/autocomplete/jquery.autocomplete.js"} />
           {Script(onLoad)}
+          {Script(onLoad2)}
         </head>
         {
           attrs.foldLeft(<input type="text" id={id} value={start} />)(_ % _)
