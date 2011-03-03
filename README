@@ -1,0 +1,7 @@
+This is a slightly modified version of Lift 2.2's AutoComplete.scala
+(from commit eff1153bc8638218951c8fe3a70a9bad77c4b471).
+
+See also Lift ticket 892:
+https://www.assembla.com/spaces/liftweb/tickets/892-autocomplete%28%29-should-have-option-to-allow-user-to-enter-their-own-value
+
+
